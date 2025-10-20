@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick = "SayHello()">click me and check game</button>
+
+
+    <form onsubmit="calculatePercentage(); return false;">
+  <input type="number" name="obtMarks" id="obtMarks" placeholder="Enter obtained marks" />
+  <input type="number" name="totalMarks" id="totalMarks" placeholder="Enter total marks" />
+  <button type="submit">Calculate</button>
+</form>
+<Div id = "result"></Div>
+
+<script>
+  function calculatePercentage() {
+    const obtMarksRef = document.getElementById("obtMarks");
+    const totalMarksRef = document.getElementById("totalMarks");
+
+    const obtMarks = Number(obtMarksRef.value);
+    const totalMarks = Number(totalMarksRef.value);
+
+    const percentage = (obtMarks / totalMarks) * 100;
+    console.log(percentage);
+
+const resultDiv = document.getElementById("result");
+resultDiv.innerText = `Your percentage is ${percentage}`;
+  } 
+
+
+
+
+</script>
+
+</body>
+</html>
